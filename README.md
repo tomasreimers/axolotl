@@ -11,6 +11,8 @@ Key files:
  science is important*.
  - `learn_touches.py`: This learns what samples are touches.
  - `learn_location.py`: This learns the location for samples of touches.
+ - `stats.py`: Runs both learn_touches and learn_location on all samples and
+ reports statistics.
 
 This can all be run with python with the current working directory set to the
 root directory of this repository.

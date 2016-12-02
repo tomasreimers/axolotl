@@ -7,6 +7,9 @@ GYRO_TYPE = "GYRO"
 window_len = 0.2
 window_samples = 20
 
+class ConsecutiveTouchError(Exception):
+    pass
+
 #
 # Sets the number of samples in a window
 #
@@ -99,17 +102,16 @@ def get_touching_windows(data, with_labels=False):
                 old_touch_y = curr_y
                 is_touching = True
             else:
-                if old_touch_x != curr_x:
-                    print old_touch_x, curr_x, curr_time
-                assert old_touch_x == curr_x
-                assert old_touch_y == curr_y
+                if old_touch_x != curr_x or old_touch_y != curr_y:
+                    raise ConsecutiveTouchError()
         else:
             is_touching = False
 
     # expand touching windows
     touching_window_times = [(tp - (window_len / 2), tp + (window_len / 2)) for tp in touching_points]
     touching_windows = []
-    for touching_window_min, touching_window_max in touching_window_times:
+    touching_labels_final = []
+    for (touching_window_min, touching_window_max), touching_label in zip(touching_window_times, touching_labels):
         min_index = None
         max_index = None
 
@@ -124,9 +126,10 @@ def get_touching_windows(data, with_labels=False):
 
         if min_index is not None and max_index is not None:
             touching_windows.append((min_index, max_index))
+            touching_labels_final.append(touching_label)
 
     if with_labels:
-        return touching_windows, touching_labels
+        return touching_windows, touching_labels_final
     else:
         return touching_windows
 
