@@ -4,10 +4,27 @@ import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
+from keras import backend as K
+import numpy as np
 
 # config
 print_predictions = True
 graph_predictions = True
+graph_error_dist = True
+
+IPHONE_HEIGHT = 1920. / 401 # 1920px at 401ppi per https://www.apple.com/iphone-7/specs/
+IPHONE_WIDTH = 1080. / 401 # 1080px at 401ppi
+
+def in_distance(y_true, y_pred):
+    y_error = y_true - y_pred
+    y_error_normalized = (y_error) / 2 # the width is currently 2 (as the coordinates are [-1, 1])
+    y_scaled_error = K.dot(y_error_normalized, K.constant(np.array([[IPHONE_WIDTH, 0], [0, IPHONE_HEIGHT]])))
+    y_distance_sq = K.sum(K.square(y_scaled_error), axis=-1)
+    y_distance = K.sqrt(y_distance_sq)
+    return y_distance
+
+def in_dist_mean(*args, **kwargs):
+    return K.mean(in_distance(*args, **kwargs))
 
 def learn_location(accel_file, gyro_file, verbose=True):
     # read the data in
@@ -40,7 +57,7 @@ def learn_location(accel_file, gyro_file, verbose=True):
     model.add(Dense(2, activation='linear'))
 
     # Compile model
-    model.compile(loss='mse', optimizer='adam', metrics=['mse'])
+    model.compile(loss='mse', optimizer='adam', metrics=['mse', in_dist_mean])
 
     # Fit the model
     verbosity = 0
@@ -52,6 +69,12 @@ def learn_location(accel_file, gyro_file, verbose=True):
     if print_predictions and verbose:
         for x_val, y_val in zip(X_test, Y_test):
             print y_val, ":", model.predict(np.array([x_val]), verbose=0)
+
+    # Show histogram of data
+    if graph_error_dist:
+        pred = model.predict(X_test)
+        plt.hist(K.eval(in_distance(K.constant(Y_test), K.constant(pred))), bins=20, normed=True)
+        plt.show()
 
     # graph predictions
     if graph_predictions and verbose:
@@ -81,3 +104,4 @@ def learn_location(accel_file, gyro_file, verbose=True):
 
 if __name__ == "__main__":
     learn_location("data/sample_0/accel.txt", "data/sample_0/gyro.txt")
+    print ""

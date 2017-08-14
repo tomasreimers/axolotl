@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from lib.axolotl import *
 
+PHASE_0_RAW_DATA = 0
 PHASE_1_RAW_DATA = 1
 PHASE_2_WINDOWS = 2
 PHASE_3_SAMPLES = 3
@@ -20,7 +21,8 @@ touching_windows = get_touching_windows(data)
 # graph the windows
 phase = None
 options = {
-    "Raw Data": PHASE_1_RAW_DATA,
+    "Raw Data": PHASE_0_RAW_DATA,
+    "Raw Data with Touches": PHASE_1_RAW_DATA,
     "Windows": PHASE_2_WINDOWS,
     "Samples": PHASE_3_SAMPLES,
     "Samples (interpolated, 10 points)": PHASE_4_INTERP_10_SAMPLES,
@@ -29,8 +31,8 @@ options = {
 }
 while phase not in options.values():
     for k, v in sorted(options.iteritems(), key=lambda x: x[1]):
-        print k + ": " + str(v)
-    phase = int(raw_input("Pick an option: "))
+        print "Option " + str(v) + ": " + k
+    phase = int(raw_input("Which option would you like to visualize (number only): "))
 
 if PHASE_4_INTERP_10_SAMPLES == phase:
     set_window_samples(10)
@@ -39,7 +41,7 @@ if PHASE_5_INTERP_20_SAMPLES == phase:
 if PHASE_6_INTERP_30_SAMPLES == phase:
     set_window_samples(30)
 
-if phase == PHASE_1_RAW_DATA or phase == PHASE_2_WINDOWS:
+if phase in [PHASE_0_RAW_DATA, PHASE_1_RAW_DATA, PHASE_2_WINDOWS]:
     g_time = [datum['time'] for datum in data]
     g_touch_x = [datum['touch_x'] for datum in data]
     g_touch_y = [datum['touch_y'] for datum in data]
@@ -68,16 +70,17 @@ if phase == PHASE_1_RAW_DATA or phase == PHASE_2_WINDOWS:
     first_touch = None
     last_touch = None
 
-    for curr_x, curr_time in zip(g_touch_x, g_time):
-        if curr_x != -2.0:
-            if first_touch is None:
-                first_touch = curr_time
-            last_touch = curr_time
-        else:
-            if first_touch is not None:
-                plt.axvspan(first_touch, last_touch, color='red', alpha=0.25)
-                first_touch = None
-                last_touch = None
+    if phase != PHASE_0_RAW_DATA:
+        for curr_x, curr_time in zip(g_touch_x, g_time):
+            if curr_x != -2.0:
+                if first_touch is None:
+                    first_touch = curr_time
+                last_touch = curr_time
+            else:
+                if first_touch is not None:
+                    plt.axvspan(first_touch, last_touch, color='red', alpha=0.25)
+                    first_touch = None
+                    last_touch = None
 
     if phase == PHASE_2_WINDOWS:
         # graph touching windows

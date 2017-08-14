@@ -46,6 +46,30 @@ def read_data(accel_file, gyro_file):
     return data
 
 #
+# Returns a list of as many windows as possible, with starts at least min_start_distance apart (in seconds)
+#
+
+def get_all_windows(data, min_start_distance=0.01):
+    g_time = [datum['time'] for datum in data]
+
+    skip_to_time = 0
+    windows = []
+    for ii in xrange(len(g_time)):
+        # skip data so windows don't overlap
+        if g_time[ii] < skip_to_time:
+            continue
+
+        # find the end of the window
+        for jj in xrange(ii,len(g_time)):
+            # break if the window is of the correct length
+            if g_time[jj] - g_time[ii] > window_len:
+                windows.append((ii, jj + 1)) # windows are of the form [start, stop)
+                skip_to_time = g_time[ii] + min_start_distance
+                break
+
+    return windows
+
+#
 # Returns a list of windows with no touching samples in the form [start, stop)
 # where start and stop are indicies in the global data array
 #
@@ -103,7 +127,13 @@ def get_touching_windows(data, with_labels=False):
                 is_touching = True
             else:
                 if old_touch_x != curr_x or old_touch_y != curr_y:
-                    raise ConsecutiveTouchError()
+                    # raise ConsecutiveTouchError()
+                    print "WARNING: Two consecutive touches in dataset (you may get odd results)"
+                    touching_points.append(curr_time)
+                    touching_labels.append([curr_x, curr_y])
+                    old_touch_x = curr_x
+                    old_touch_y = curr_y
+                    is_touching = True
         else:
             is_touching = False
 
@@ -181,7 +211,7 @@ def expand_windows_interpolated(data, windows):
     to_return = []
 
     for start, stop in windows:
-        time_interp = np.linspace(g_time[start], g_time[stop], window_samples)
+        time_interp = np.linspace(g_time[start], g_time[stop - 1], window_samples)
 
         to_return.append(
             (

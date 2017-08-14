@@ -5,7 +5,7 @@ from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 
 # config
-print_predictions = True
+print_predictions = False
 
 def learn_touches(accel_file, gyro_file, verbose=True):
     # read the data in
@@ -62,3 +62,4 @@ def learn_touches(accel_file, gyro_file, verbose=True):
 
 if __name__ == "__main__":
     learn_touches("data/sample_0/accel.txt", "data/sample_0/gyro.txt")
+    print ""
