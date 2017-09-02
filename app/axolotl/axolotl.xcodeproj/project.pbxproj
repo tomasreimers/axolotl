@@ -13,6 +13,7 @@
 		C8AC92641EA2AE76000823B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC92611EA2AE76000823B2 /* AppDelegate.swift */; };
 		C8AC92651EA2AE76000823B2 /* MotionStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC92621EA2AE76000823B2 /* MotionStream.swift */; };
 		C8AC92661EA2AE76000823B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC92631EA2AE76000823B2 /* ViewController.swift */; };
+		F444F991A6221A676C4BCAAD /* Pods_axolotl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3F3063B97800372006C835 /* Pods_axolotl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B3F3063B97800372006C835 /* Pods_axolotl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_axolotl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603343D24A12FCA1899E128E /* Pods-axolotl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-axolotl.release.xcconfig"; path = "Pods/Target Support Files/Pods-axolotl/Pods-axolotl.release.xcconfig"; sourceTree = "<group>"; };
+		B55DD8DBB84AB258D7B4F4E2 /* Pods-axolotl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-axolotl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-axolotl/Pods-axolotl.debug.xcconfig"; sourceTree = "<group>"; };
 		C8AC923E1EA2AE56000823B2 /* axolotl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = axolotl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8AC92481EA2AE56000823B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8AC924B1EA2AE56000823B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F444F991A6221A676C4BCAAD /* Pods_axolotl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D714569B633EF78CA963657 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B55DD8DBB84AB258D7B4F4E2 /* Pods-axolotl.debug.xcconfig */,
+				603343D24A12FCA1899E128E /* Pods-axolotl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C834FD69EDD12C7A1E8FBACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B3F3063B97800372006C835 /* Pods_axolotl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C8AC92351EA2AE56000823B2 = {
 			isa = PBXGroup;
 			children = (
 				C8AC92401EA2AE56000823B2 /* axolotl */,
 				C8AC92551EA2AE57000823B2 /* axolotlTests */,
 				C8AC923F1EA2AE56000823B2 /* Products */,
+				5D714569B633EF78CA963657 /* Pods */,
+				C834FD69EDD12C7A1E8FBACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8AC925B1EA2AE57000823B2 /* Build configuration list for PBXNativeTarget "axolotl" */;
 			buildPhases = (
+				5C188E3AC2FD244C54761D58 /* [CP] Check Pods Manifest.lock */,
 				C8AC923A1EA2AE56000823B2 /* Sources */,
 				C8AC923B1EA2AE56000823B2 /* Frameworks */,
 				C8AC923C1EA2AE56000823B2 /* Resources */,
+				2F9F32A12B9EB9D852B618AF /* [CP] Embed Pods Frameworks */,
+				03967DF7D59050034B7CD197 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +221,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03967DF7D59050034B7CD197 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-axolotl/Pods-axolotl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F9F32A12B9EB9D852B618AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-axolotl/Pods-axolotl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C188E3AC2FD244C54761D58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8AC923A1EA2AE56000823B2 /* Sources */ = {
@@ -331,6 +406,7 @@
 		};
 		C8AC925C1EA2AE57000823B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55DD8DBB84AB258D7B4F4E2 /* Pods-axolotl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V7W69N399;
@@ -344,6 +420,7 @@
 		};
 		C8AC925D1EA2AE57000823B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603343D24A12FCA1899E128E /* Pods-axolotl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2V7W69N399;
