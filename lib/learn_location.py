@@ -1,4 +1,4 @@
-from lib.axolotl import *
+from axolotl import *
 import numpy as np
 import matplotlib.pyplot as plt
 from keras.models import Sequential
@@ -25,6 +25,27 @@ def in_distance(y_true, y_pred):
 
 def in_dist_mean(*args, **kwargs):
     return K.mean(in_distance(*args, **kwargs))
+
+def train_location_model(data):
+    # find windows where touching
+    touching_windows, touching_labels = get_touching_windows(data, with_labels=True)
+    expanded_touching_windows = expand_windows_interpolated(data, touching_windows)
+    # convert to feature vectors
+    positive_feature_vectors = feature_vectors_from_windows(expanded_touching_windows)
+    # split into input (X) and output (Y) variables
+    X = np.array(map(np.array, positive_feature_vectors))
+    Y = np.array(map(np.array, touching_labels))
+    # create model
+    model = Sequential()
+    model.add(Dense(window_samples * 4, input_dim=window_samples * 6, activation='linear'))
+    model.add(Dense(window_samples * 2, activation='linear'))
+    model.add(Dense(window_samples, activation='linear'))
+    model.add(Dense(2, activation='linear'))
+    # Compile model
+    model.compile(loss='mse', optimizer='adam', metrics=['mse', in_dist_mean])
+    # Fit the model
+    model.fit(X, Y, nb_epoch=40, batch_size=20, verbose=0)
+    return model
 
 def learn_location(accel_file, gyro_file, verbose=True):
     # read the data in

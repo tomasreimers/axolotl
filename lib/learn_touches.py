@@ -11,24 +11,30 @@ def train_touch_model(data):
     # find windows where not touching
     not_touching_windows = get_not_touching_windows(data)
     expanded_not_touching_windows = expand_windows_interpolated(data, not_touching_windows)
+
     # find windows where touching
     touching_windows = get_touching_windows(data)
     expanded_touching_windows = expand_windows_interpolated(data, touching_windows)
+
     # convert to feature vectors
     positive_feature_vectors = feature_vectors_from_windows(expanded_touching_windows)
     negative_feature_vectors = feature_vectors_from_windows(expanded_not_touching_windows)
+
     # split into input (X) and output (Y) variables
     X = np.array(map(np.array, positive_feature_vectors) + map(np.array, negative_feature_vectors))
     Y = np.array([1] * len(positive_feature_vectors) + [0] * len(negative_feature_vectors))
+
     # create model
     model = Sequential()
     model.add(Dense(window_samples * 4, input_dim=window_samples * 6, activation='relu'))
     model.add(Dense(window_samples * 2, activation='relu'))
     model.add(Dense(window_samples, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
+
     # Compile model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    model.fit(X, Y, nb_epoch=40, batch_size=20, verbose=0)
+
+    model.fit(X, Y, nb_epoch=40, batch_size=20)
     return model
 
 def learn_touches(accel_file, gyro_file, verbose=True):
