@@ -130,8 +130,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C849611C1F5B141600989591 /* Build configuration list for PBXNativeTarget "Axolotl" */;
 			buildPhases = (
-				CE14FA27A66FC15B7FB89382 /* [CP] Check Pods Manifest.lock */,
 				C84961241F5B14A800989591 /* Swift Lint */,
+				CE14FA27A66FC15B7FB89382 /* [CP] Check Pods Manifest.lock */,
 				C84960FB1F5B141600989591 /* Sources */,
 				C84960FC1F5B141600989591 /* Frameworks */,
 				C84960FD1F5B141600989591 /* Resources */,

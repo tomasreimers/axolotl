@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGestureRecognizer(touchRecognizer!);
+        view.addGestureRecognizer(touchRecognizer!)
 
         // register background task
         registerBackgroundTask()
@@ -38,45 +38,45 @@ class ViewController: UIViewController {
         startMotionUpdates()
     }
 
-    func tapped(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        if (gestureRecognizer.state == .began) {
+    @objc func tapped(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
             let nonnormal = gestureRecognizer.location(in: self.view)
             touchLocation = CGPoint(x: (nonnormal.x / UIScreen.main.bounds.width) * 2 - 1,
                                     y: (nonnormal.y / UIScreen.main.bounds.height) * 2 - 1)
             print(touchLocation)
         }
-        if (gestureRecognizer.state == .ended) {
+        if gestureRecognizer.state == .ended {
             touchLocation = CGPoint(x:-2, y:-2)
         }
     }
 
     func registerBackgroundTask() {
         backgroundTask = UIApplication.shared.beginBackgroundTask {
-            print("Starting background task");
+            print("Starting background task")
         }
         assert(backgroundTask != UIBackgroundTaskInvalid)
-        print("Background task registered");
+        print("Background task registered")
     }
 
     func startMotionUpdates() {
         // Capture gyro data
-        manager.startGyroUpdates(to: OperationQueue.main, withHandler: {gyroData, error in
+        manager.startGyroUpdates(to: OperationQueue.main, withHandler: {gyroData, _ in
             if let data = gyroData {
                 self.motionStream.addGyro(time: data.timestamp,
-                                          x: CGFloat(data.rotationRate.x),
-                                          y: CGFloat(data.rotationRate.y),
-                                          z: CGFloat(data.rotationRate.z),
+                                          xLoc: CGFloat(data.rotationRate.x),
+                                          yLoc: CGFloat(data.rotationRate.y),
+                                          zLoc: CGFloat(data.rotationRate.z),
                                           point: self.touchLocation)
 
             }
         })
         // Capture accel data
-        manager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: {accelData, error in
+        manager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: {accelData, _ in
             if let data = accelData {
                 self.motionStream.addAccel(time: data.timestamp,
-                                           x: CGFloat(data.acceleration.x),
-                                           y: CGFloat(data.acceleration.y),
-                                           z: CGFloat(data.acceleration.z),
+                                           xLoc: CGFloat(data.acceleration.x),
+                                           yLoc: CGFloat(data.acceleration.y),
+                                           zLoc: CGFloat(data.acceleration.z),
                                            point: self.touchLocation)
             }
         })
