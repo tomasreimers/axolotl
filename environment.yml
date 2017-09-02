@@ -1,4 +1,4 @@
-name: numpy-env
+name: AXOLOTL
 dependencies:
 - python=2.7.13
 - keras
