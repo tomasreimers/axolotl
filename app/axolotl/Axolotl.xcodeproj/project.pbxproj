@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F283090807E540E776D52FE /* Pods_Axolotl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3A71E3FA99C9F87726B685 /* Pods_Axolotl.framework */; };
+		C84961031F5B141600989591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961021F5B141600989591 /* AppDelegate.swift */; };
+		C84961051F5B141600989591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961041F5B141600989591 /* ViewController.swift */; };
+		C84961081F5B141600989591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84961061F5B141600989591 /* Main.storyboard */; };
+		C849610A1F5B141600989591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84961091F5B141600989591 /* Assets.xcassets */; };
+		C849610D1F5B141600989591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C849610B1F5B141600989591 /* LaunchScreen.storyboard */; };
+		C84961181F5B141600989591 /* AxolotlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961171F5B141600989591 /* AxolotlTests.swift */; };
+		C84961231F5B148000989591 /* MotionStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961221F5B148000989591 /* MotionStream.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C84961141F5B141600989591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C84960F71F5B141600989591 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C84960FE1F5B141600989591;
+			remoteInfo = Axolotl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08D143D7997AB23CAD0479EC /* Pods-Axolotl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axolotl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl.release.xcconfig"; sourceTree = "<group>"; };
+		3C3A71E3FA99C9F87726B685 /* Pods_Axolotl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axolotl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84960FF1F5B141600989591 /* Axolotl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axolotl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84961021F5B141600989591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C84961041F5B141600989591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C84961071F5B141600989591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C84961091F5B141600989591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C849610C1F5B141600989591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C849610E1F5B141600989591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C84961131F5B141600989591 /* AxolotlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AxolotlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84961171F5B141600989591 /* AxolotlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxolotlTests.swift; sourceTree = "<group>"; };
+		C84961191F5B141600989591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C84961221F5B148000989591 /* MotionStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionStream.swift; sourceTree = "<group>"; };
+		E44947EAE030720EF7524F66 /* Pods-Axolotl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axolotl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C84960FC1F5B141600989591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F283090807E540E776D52FE /* Pods_Axolotl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84961101F5B141600989591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C7607281FBDA7CEAE814C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C3A71E3FA99C9F87726B685 /* Pods_Axolotl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C84960F61F5B141600989591 = {
+			isa = PBXGroup;
+			children = (
+				C84961011F5B141600989591 /* Axolotl */,
+				C84961161F5B141600989591 /* AxolotlTests */,
+				C84961001F5B141600989591 /* Products */,
+				FD8F8270E3ADCA77A4FC84B9 /* Pods */,
+				5C7607281FBDA7CEAE814C03 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C84961001F5B141600989591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C84960FF1F5B141600989591 /* Axolotl.app */,
+				C84961131F5B141600989591 /* AxolotlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C84961011F5B141600989591 /* Axolotl */ = {
+			isa = PBXGroup;
+			children = (
+				C84961021F5B141600989591 /* AppDelegate.swift */,
+				C84961041F5B141600989591 /* ViewController.swift */,
+				C84961221F5B148000989591 /* MotionStream.swift */,
+				C84961061F5B141600989591 /* Main.storyboard */,
+				C84961091F5B141600989591 /* Assets.xcassets */,
+				C849610B1F5B141600989591 /* LaunchScreen.storyboard */,
+				C849610E1F5B141600989591 /* Info.plist */,
+			);
+			path = Axolotl;
+			sourceTree = "<group>";
+		};
+		C84961161F5B141600989591 /* AxolotlTests */ = {
+			isa = PBXGroup;
+			children = (
+				C84961171F5B141600989591 /* AxolotlTests.swift */,
+				C84961191F5B141600989591 /* Info.plist */,
+			);
+			path = AxolotlTests;
+			sourceTree = "<group>";
+		};
+		FD8F8270E3ADCA77A4FC84B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44947EAE030720EF7524F66 /* Pods-Axolotl.debug.xcconfig */,
+				08D143D7997AB23CAD0479EC /* Pods-Axolotl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C84960FE1F5B141600989591 /* Axolotl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C849611C1F5B141600989591 /* Build configuration list for PBXNativeTarget "Axolotl" */;
+			buildPhases = (
+				CE14FA27A66FC15B7FB89382 /* [CP] Check Pods Manifest.lock */,
+				C84961241F5B14A800989591 /* Swift Lint */,
+				C84960FB1F5B141600989591 /* Sources */,
+				C84960FC1F5B141600989591 /* Frameworks */,
+				C84960FD1F5B141600989591 /* Resources */,
+				C275797B4A2AE52B3F57DBE8 /* [CP] Embed Pods Frameworks */,
+				9B71515A31CC6F3DA1603CDF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Axolotl;
+			productName = Axolotl;
+			productReference = C84960FF1F5B141600989591 /* Axolotl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C84961121F5B141600989591 /* AxolotlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C849611F1F5B141600989591 /* Build configuration list for PBXNativeTarget "AxolotlTests" */;
+			buildPhases = (
+				C849610F1F5B141600989591 /* Sources */,
+				C84961101F5B141600989591 /* Frameworks */,
+				C84961111F5B141600989591 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C84961151F5B141600989591 /* PBXTargetDependency */,
+			);
+			name = AxolotlTests;
+			productName = AxolotlTests;
+			productReference = C84961131F5B141600989591 /* AxolotlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C84960F71F5B141600989591 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Greg M Foster";
+				TargetAttributes = {
+					C84960FE1F5B141600989591 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					C84961121F5B141600989591 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C84960FE1F5B141600989591;
+					};
+				};
+			};
+			buildConfigurationList = C84960FA1F5B141600989591 /* Build configuration list for PBXProject "Axolotl" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C84960F61F5B141600989591;
+			productRefGroup = C84961001F5B141600989591 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C84960FE1F5B141600989591 /* Axolotl */,
+				C84961121F5B141600989591 /* AxolotlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C84960FD1F5B141600989591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C849610D1F5B141600989591 /* LaunchScreen.storyboard in Resources */,
+				C849610A1F5B141600989591 /* Assets.xcassets in Resources */,
+				C84961081F5B141600989591 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84961111F5B141600989591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B71515A31CC6F3DA1603CDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C275797B4A2AE52B3F57DBE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C84961241F5B14A800989591 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "//\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		CE14FA27A66FC15B7FB89382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C84960FB1F5B141600989591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84961051F5B141600989591 /* ViewController.swift in Sources */,
+				C84961231F5B148000989591 /* MotionStream.swift in Sources */,
+				C84961031F5B141600989591 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C849610F1F5B141600989591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84961181F5B141600989591 /* AxolotlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C84961151F5B141600989591 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C84960FE1F5B141600989591 /* Axolotl */;
+			targetProxy = C84961141F5B141600989591 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C84961061F5B141600989591 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C84961071F5B141600989591 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C849610B1F5B141600989591 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C849610C1F5B141600989591 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C849611A1F5B141600989591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C849611B1F5B141600989591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C849611D1F5B141600989591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44947EAE030720EF7524F66 /* Pods-Axolotl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V7W69N399;
+				INFOPLIST_FILE = Axolotl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.Axolotl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C849611E1F5B141600989591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08D143D7997AB23CAD0479EC /* Pods-Axolotl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V7W69N399;
+				INFOPLIST_FILE = Axolotl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.Axolotl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C84961201F5B141600989591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V7W69N399;
+				INFOPLIST_FILE = AxolotlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.AxolotlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Axolotl.app/Axolotl";
+			};
+			name = Debug;
+		};
+		C84961211F5B141600989591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2V7W69N399;
+				INFOPLIST_FILE = AxolotlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.AxolotlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Axolotl.app/Axolotl";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C84960FA1F5B141600989591 /* Build configuration list for PBXProject "Axolotl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C849611A1F5B141600989591 /* Debug */,
+				C849611B1F5B141600989591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C849611C1F5B141600989591 /* Build configuration list for PBXNativeTarget "Axolotl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C849611D1F5B141600989591 /* Debug */,
+				C849611E1F5B141600989591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C849611F1F5B141600989591 /* Build configuration list for PBXNativeTarget "AxolotlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84961201F5B141600989591 /* Debug */,
+				C84961211F5B141600989591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C84960F71F5B141600989591 /* Project object */;
+}

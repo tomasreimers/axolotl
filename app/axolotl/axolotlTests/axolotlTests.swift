@@ -1,15 +1,15 @@
 //
-//  axolotlTests.swift
-//  axolotlTests
+//  AxolotlTests.swift
+//  AxolotlTests
 //
-//  Created by Gregory Foster on 4/15/17.
+//  Created by Gregory Foster on 9/2/17.
 //  Copyright © 2017 Greg M Foster. All rights reserved.
 //
 
 import XCTest
-@testable import axolotl
+@testable import Axolotl
 
-class axolotlTests: XCTestCase {
+class AxolotlTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
