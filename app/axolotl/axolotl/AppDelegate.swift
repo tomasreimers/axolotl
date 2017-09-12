@@ -15,9 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let testViewController = ViewController()
+        let tabController = UITabBarController()
+        let recorderViewController = RecorderViewController()
+        let predictorViewController = PredictorViewController()
+        tabController.viewControllers = [predictorViewController, recorderViewController]
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.rootViewController = testViewController
+        self.window!.rootViewController = tabController
         self.window!.backgroundColor = UIColor.white
         self.window!.makeKeyAndVisible()
         return true

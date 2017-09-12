@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AC0C75829B03443875350B11649AF5AE"
-               BuildableName = "Pods_Axolotl.framework"
-               BlueprintName = "Pods-Axolotl"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "C84960FE1F5B141600989591"
+               BuildableName = "Axolotl.app"
+               BlueprintName = "Axolotl"
+               ReferencedContainer = "container:Axolotl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C84961121F5B141600989591"
+               BuildableName = "AxolotlTests.xctest"
+               BlueprintName = "AxolotlTests"
+               ReferencedContainer = "container:Axolotl.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C84960FE1F5B141600989591"
+            BuildableName = "Axolotl.app"
+            BlueprintName = "Axolotl"
+            ReferencedContainer = "container:Axolotl.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AC0C75829B03443875350B11649AF5AE"
-            BuildableName = "Pods_Axolotl.framework"
-            BlueprintName = "Pods-Axolotl"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "C84960FE1F5B141600989591"
+            BuildableName = "Axolotl.app"
+            BlueprintName = "Axolotl"
+            ReferencedContainer = "container:Axolotl.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C84960FE1F5B141600989591"
+            BuildableName = "Axolotl.app"
+            BlueprintName = "Axolotl"
+            ReferencedContainer = "container:Axolotl.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

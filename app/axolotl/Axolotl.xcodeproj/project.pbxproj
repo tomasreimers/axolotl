@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0F283090807E540E776D52FE /* Pods_Axolotl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3A71E3FA99C9F87726B685 /* Pods_Axolotl.framework */; };
+		C8218B951F67824D002B6DF7 /* touch_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C8218B931F6781F4002B6DF7 /* touch_model.mlmodel */; };
+		C8218B961F67824F002B6DF7 /* location_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C8218B941F6781F4002B6DF7 /* location_model.mlmodel */; };
 		C84961031F5B141600989591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961021F5B141600989591 /* AppDelegate.swift */; };
-		C84961051F5B141600989591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961041F5B141600989591 /* ViewController.swift */; };
+		C84961051F5B141600989591 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961041F5B141600989591 /* RecorderViewController.swift */; };
 		C84961081F5B141600989591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84961061F5B141600989591 /* Main.storyboard */; };
 		C849610A1F5B141600989591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84961091F5B141600989591 /* Assets.xcassets */; };
 		C849610D1F5B141600989591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C849610B1F5B141600989591 /* LaunchScreen.storyboard */; };
 		C84961181F5B141600989591 /* AxolotlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961171F5B141600989591 /* AxolotlTests.swift */; };
 		C84961231F5B148000989591 /* MotionStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84961221F5B148000989591 /* MotionStream.swift */; };
+		C85A2AC21F677817009839C2 /* PredictorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85A2AC11F677817009839C2 /* PredictorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +33,11 @@
 /* Begin PBXFileReference section */
 		08D143D7997AB23CAD0479EC /* Pods-Axolotl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axolotl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl.release.xcconfig"; sourceTree = "<group>"; };
 		3C3A71E3FA99C9F87726B685 /* Pods_Axolotl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axolotl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8218B931F6781F4002B6DF7 /* touch_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = touch_model.mlmodel; path = ../../../touch_model.mlmodel; sourceTree = "<group>"; };
+		C8218B941F6781F4002B6DF7 /* location_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = location_model.mlmodel; path = ../../../location_model.mlmodel; sourceTree = "<group>"; };
 		C84960FF1F5B141600989591 /* Axolotl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axolotl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84961021F5B141600989591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C84961041F5B141600989591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C84961041F5B141600989591 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		C84961071F5B141600989591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C84961091F5B141600989591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C849610C1F5B141600989591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		C84961171F5B141600989591 /* AxolotlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxolotlTests.swift; sourceTree = "<group>"; };
 		C84961191F5B141600989591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84961221F5B148000989591 /* MotionStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionStream.swift; sourceTree = "<group>"; };
+		C85A2AC11F677817009839C2 /* PredictorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictorViewController.swift; sourceTree = "<group>"; };
 		E44947EAE030720EF7524F66 /* Pods-Axolotl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axolotl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Axolotl/Pods-Axolotl.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,12 +101,15 @@
 			isa = PBXGroup;
 			children = (
 				C84961021F5B141600989591 /* AppDelegate.swift */,
-				C84961041F5B141600989591 /* ViewController.swift */,
+				C84961041F5B141600989591 /* RecorderViewController.swift */,
+				C85A2AC11F677817009839C2 /* PredictorViewController.swift */,
 				C84961221F5B148000989591 /* MotionStream.swift */,
 				C84961061F5B141600989591 /* Main.storyboard */,
 				C84961091F5B141600989591 /* Assets.xcassets */,
 				C849610B1F5B141600989591 /* LaunchScreen.storyboard */,
 				C849610E1F5B141600989591 /* Info.plist */,
+				C8218B941F6781F4002B6DF7 /* location_model.mlmodel */,
+				C8218B931F6781F4002B6DF7 /* touch_model.mlmodel */,
 			);
 			path = Axolotl;
 			sourceTree = "<group>";
@@ -130,8 +139,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C849611C1F5B141600989591 /* Build configuration list for PBXNativeTarget "Axolotl" */;
 			buildPhases = (
-				C84961241F5B14A800989591 /* Swift Lint */,
 				CE14FA27A66FC15B7FB89382 /* [CP] Check Pods Manifest.lock */,
+				C84961241F5B14A800989591 /* Swift Lint */,
 				C84960FB1F5B141600989591 /* Sources */,
 				C84960FC1F5B141600989591 /* Frameworks */,
 				C84960FD1F5B141600989591 /* Resources */,
@@ -292,9 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C84961051F5B141600989591 /* ViewController.swift in Sources */,
+				C84961051F5B141600989591 /* RecorderViewController.swift in Sources */,
+				C8218B961F67824F002B6DF7 /* location_model.mlmodel in Sources */,
+				C8218B951F67824D002B6DF7 /* touch_model.mlmodel in Sources */,
 				C84961231F5B148000989591 /* MotionStream.swift in Sources */,
 				C84961031F5B141600989591 /* AppDelegate.swift in Sources */,
+				C85A2AC21F677817009839C2 /* PredictorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V7W69N399;
 				INFOPLIST_FILE = Axolotl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.Axolotl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V7W69N399;
 				INFOPLIST_FILE = Axolotl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gregmfoster.Axolotl;
 				PRODUCT_NAME = "$(TARGET_NAME)";

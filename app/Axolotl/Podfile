@@ -2,6 +2,5 @@ platform :ios, '11.0'
 use_frameworks!
 
 target "Axolotl" do
-  pod 'Charts'
   pod 'SwiftLint'
 end

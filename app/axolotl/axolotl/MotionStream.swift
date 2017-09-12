@@ -16,35 +16,22 @@ struct SimpleMoment {
     var point: CGPoint = CGPoint(x: -2, y: -2)
 }
 
-class MotionStream {
-    let bufferLength: TimeInterval = 180
+class MotionStream: NSObject {
+    let bufferLength: Int
     var gyroMoments: [SimpleMoment] = []
     var accelMoments: [SimpleMoment] = []
 
+    init(bufferLength: Int) {
+        self.bufferLength = bufferLength
+        super.init()
+    }
+
     func addGyro(time: TimeInterval, xLoc: CGFloat, yLoc: CGFloat, zLoc: CGFloat, point: CGPoint) {
         gyroMoments.insert(SimpleMoment(time:time, xLoc:xLoc, yLoc:yLoc, zLoc:zLoc, point:point), at:0)
-        if let first = gyroMoments.first?.time, let last = gyroMoments.last?.time {
-            let timeElapsed = abs(last - first)
-            print(timeElapsed)
-            if timeElapsed  > bufferLength {
-                snapshot(type: "GYRO", moments: gyroMoments)
-                snapshot(type: "ACCEL", moments: accelMoments)
-                accelMoments = []
-                gyroMoments = []
-            }
-        }
     }
 
     func addAccel(time: TimeInterval, xLoc: CGFloat, yLoc: CGFloat, zLoc: CGFloat, point: CGPoint) {
         accelMoments.insert(SimpleMoment(time:time, xLoc:xLoc, yLoc:yLoc, zLoc:zLoc, point:point), at:0)
-        if let first = accelMoments.first?.time, let last = accelMoments.last?.time {
-            if abs(last - first) > bufferLength {
-                snapshot(type: "GYRO", moments: gyroMoments)
-                snapshot(type: "ACCEL", moments: accelMoments)
-                accelMoments = []
-                gyroMoments = []
-            }
-        }
     }
 
     func getGyroData() -> [SimpleMoment] {
@@ -53,6 +40,10 @@ class MotionStream {
 
     func getAccelData() -> [SimpleMoment] {
         return accelMoments
+    }
+
+    func getGyroAndAccel() -> ([SimpleMoment], [SimpleMoment]) {
+        return (gyroMoments, accelMoments)
     }
 
     func snapshot(type: String, moments: [SimpleMoment]) {
